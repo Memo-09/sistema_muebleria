@@ -1,0 +1,8 @@
+.input-color {
+    background-color: lightblue; /* Color de fondo */
+    color: darkblue;            /* Color del texto */
+    border: 1px solid gray;     /* Borde del cuadro */
+    padding: 5px;               /* Espaciado interno para mejor apariencia */
+    font-size: 16px;            /* Tamaño del texto */
+    border-radius: 4px;         /* Esquinas redondeadas opcionales */
+}

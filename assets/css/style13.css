@@ -1,0 +1,48 @@
+.datosdeacceso {
+    background-color: rgb(178, 175, 214); /* Fondo verde */
+    margin: 10px;            /* Margen gris */
+    padding: 15px;           /* Espaciado interno */
+    border-radius: 8px;      /* Bordes redondeados */
+    color: white;            /* Texto en color blanco para contraste */
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.15); /* Agregando sombra para resaltar el div */
+}
+
+
+.informacion {
+    background-color: lightblue; /* Fondo azul claro */
+    margin: 10px;                /* Margen alrededor */
+    padding: 15px;               /* Espaciado interno */
+    border-radius: 8px;      /* Bordes redondeados */
+    color: black;                /* Texto en color negro */
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.15); /* Agregando sombra para resaltar el div */
+}
+
+.password-container {
+    position: relative;
+    display: inline-block;
+}
+
+#contrasenia {
+    padding-right: 30px; /* Deja espacio para el icono */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 2; /* Asegura que el icono esté por encima del input */
+    background-color: transparent; /* Evita que el icono tenga fondo */
+    border: none; /* Elimina cualquier borde alrededor del icono */
+}
+
+
+#contrasenia {
+    background-color: white;  /* Fondo blanco */
+    color: black;             /* Texto negro */
+    border: 1px solid #ccc;   /* Borde gris claro */
+    padding: 10px;            /* Espaciado interno */
+    border-radius: 5px;       /* Bordes redondeados */
+}

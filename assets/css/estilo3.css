@@ -1,0 +1,26 @@
+.categoria-btn {
+    width: 210px;
+    height: 40px;
+    background-color: orange;
+    border: 1px solid #cc8400;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.categoria-btn:hover {
+    background-color: #e69500;
+}
+
+.boton-item2{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: black;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}

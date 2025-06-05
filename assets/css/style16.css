@@ -1,0 +1,5 @@
+.table-responsive7 {
+    max-height: 400px;   /* Definir la altura máxima */
+    overflow-y: auto;    /* Permite el desplazamiento vertical cuando excede la altura */
+    display: block;      /* Asegura que el contenedor sea un bloque y que se active el scroll */
+}

@@ -1,0 +1,22 @@
+.detalleVenta {
+    background-color: #f0f0f0; /* Gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    border: 2px solid #d1d1d1; /* Borde gris */
+    margin: 10px; /* Margen exterior */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.actualizarCantidad {
+    background-color: #777474; /* Negro claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    border: 2px solid #555555; /* Borde gris oscuro */
+    margin: 10px; /* Margen exterior */
+    color: #ffffff; /* Texto blanco para contraste */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+}
+
+.ventas tr {
+    background-color: white;
+}

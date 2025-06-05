@@ -1,0 +1,10 @@
+.boton-item3{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: rgb(216, 37, 37);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}

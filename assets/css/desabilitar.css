@@ -1,0 +1,5 @@
+.checkbox-disabled {
+    accent-color: red !important; /* Cambia el color del checkbox en navegadores modernos */
+    cursor: not-allowed; /* Cambia el cursor a "no permitido" */
+    opacity: 0.7; /* Le da un efecto visual de deshabilitado */
+}

@@ -1,0 +1,23 @@
+@media (max-width: 945px) {
+    .scroll-container {
+        width: 100%;  /* Ajusta al 100% del ancho de la pantalla */
+        height: 400px; /* Ajusta la altura del contenedor, puedes cambiarlo */
+        overflow: auto; /* Activa el scroll tanto horizontal como vertical */
+        border: none; /* Elimina cualquier borde visible */
+    }
+
+    .contenedor2{
+        width: 100%;  /* Ajusta al 100% del ancho de la pantalla */
+        height: 600px; /* Ajusta la altura del contenedor, puedes cambiarlo */
+        overflow: auto; /* Activa el scroll tanto horizontal como vertical */
+        border: none; /* Elimina cualquier borde visible */
+    }
+}
+
+.table-responsive1{
+    width: 100%;  /* Ajusta al 100% del ancho de la pantalla */
+    height: 400px; /* Ajusta la altura del contenedor, puedes cambiarlo */
+    overflow-x: hidden; /* Activa el scroll horizontal */
+    overflow-y: auto; /* Desactiva el scroll vertical */
+    border: none; /* Elimina cualquier borde visible */
+}
