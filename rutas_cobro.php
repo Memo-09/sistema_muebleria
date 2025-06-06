@@ -200,6 +200,12 @@ if (!isset($_SESSION['usuario'])) {
                                             <img src="assets/img/estadisticas.png" alt="img">
                                         </a>
                                     </li>
+                                    <li>
+                                        <a onclick="togglePopupImprimirMorbosidad()" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Informe de Morbosidad de Clientes">
+                                            <img src="assets/img/indispuesto.png" alt="img">
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -328,6 +334,7 @@ if (!isset($_SESSION['usuario'])) {
     <script src="assets/js/añadir_cartera_4.js"></script>
     <script src="assets/js/imprimir_rendimientos.js"></script>
     <script src="assets/js/estadisticas.js"></script>
+    <script src="assets/js/informe_morboso.js"></script>
 
 
     <script src="assets/js/jquery.slimscroll.min.js"></script>
@@ -463,7 +470,7 @@ if (!isset($_SESSION['usuario'])) {
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12">
-                                <div class="table-responsive">
+                                <div class="table-responsive6">
                                     <table class="table carteraAgregarS">
                                         <thead>
                                             <tr>

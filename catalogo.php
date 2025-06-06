@@ -78,15 +78,15 @@
                 <div id="sidebar-menu" class="sidebar-menu">
                     <?php include('conexion.php'); ?>
                     <ul>
-                    <?php
-                    $consulta = "CALL obtener_clasificaciones()";
-                    $resultado = mysqli_query($conexion, $consulta);
+                        <?php
+                        $consulta = "CALL obtener_clasificaciones()";
+                        $resultado = mysqli_query($conexion, $consulta);
 
-                    while ($fila = mysqli_fetch_row($resultado)) {
-                        $descripcion = htmlspecialchars($fila[0]); // DESCRIPCION_CLASIFICACION
-                        $id = $fila[1]; // ID_CLASIFICACION
+                        while ($fila = mysqli_fetch_row($resultado)) {
+                            $descripcion = htmlspecialchars($fila[0]); // DESCRIPCION_CLASIFICACION
+                            $id = $fila[1]; // ID_CLASIFICACION
 
-                        echo '
+                            echo '
                             <li>
                                 <button class="categoria-btn" data-id="' . $id . '">
                                     <img src="assets/img/sofa.png" alt="img" style="width:16px; height:16px; vertical-align:middle; margin-right:5px;">
@@ -94,8 +94,8 @@
                                 </button>
                             </li>
                         ';
-                    }
-                    ?>
+                        }
+                        ?>
                     </ul>
 
                 </div>
