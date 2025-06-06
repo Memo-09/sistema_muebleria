@@ -1,25 +1,24 @@
 <?php
 include('../conexion.php');
 
-if (isset($_POST["claveventa"])) {
+if (isset($_POST["claveventa"]) && isset($_POST["cantidad"]) && isset($_POST["fecha"])) {
     $idVenta = $_POST["claveventa"];
     $cantidad = $_POST["cantidad"];
-    
-    // Usamos un procedimiento almacenado para insertar el enganche
-    $query = "CALL InsertarEnganche2Venta(?, ?, @mensaje);";
-    
-    // Preparar la consulta para ejecutar el procedimiento almacenado
-    if ($stmt = $conexion->prepare($query)) {
-        // Vincular los parámetros
-        $stmt->bind_param("id", $idVenta, $cantidad);
+    $fecha = $_POST["fecha"]; // ⬅️ Capturamos la fecha enviada
 
-        // Ejecutar el procedimiento almacenado
+    // Llamar al procedimiento almacenado con 3 parámetros de entrada y uno de salida
+    $query = "CALL InsertarEnganche2Venta(?, ?, ?, @mensaje);";
+
+    if ($stmt = $conexion->prepare($query)) {
+        // 'ids' = int, double, string (DATE en formato 'YYYY-MM-DD')
+        $stmt->bind_param("ids", $idVenta, $cantidad, $fecha);
+
         if ($stmt->execute()) {
-            // Recuperar el mensaje
+            // Obtener el mensaje devuelto
             $result = $conexion->query("SELECT @mensaje AS mensaje");
             if ($result) {
                 $row = $result->fetch_assoc();
-                echo $row['mensaje'];  // Mostrar el mensaje devuelto
+                echo $row['mensaje'];
             } else {
                 echo "Error al recuperar el mensaje.";
             }
@@ -27,18 +26,17 @@ if (isset($_POST["claveventa"])) {
             echo "Error al ejecutar el procedimiento almacenado.";
         }
 
-        // Cerrar la declaración
         $stmt->close();
     } else {
         echo "Error al preparar la consulta.";
     }
 
-    // Cerrar la conexión
     $conexion->close();
 } else {
-    echo "No se recibió un ID de venta.";
+    echo "Faltan parámetros (ID de venta, cantidad o fecha).";
 }
 ?>
+
 
 
 

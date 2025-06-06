@@ -69,4 +69,3 @@ function agregarEnganche() {
     // ⬇️ Enviar también la fecha
     xhr.send(`claveventa=${claveVenta}&cantidad=${enganche}&fecha=${fechaEnganche}`);
 }
-

@@ -316,7 +316,7 @@ if (!isset($_SESSION['usuario'])) {
     <script src="assets/js/usuarios.js"></script>
     <script src="assets/js/ticket_3.js"></script>
     <script src="assets/js/deudores.js"></script>
-    <script src="assets/js/enganche3.js"></script>
+    <script src="assets/js/enganche4.js"></script>
 
 
     <script src="assets/js/jquery.slimscroll.min.js"></script>
@@ -534,6 +534,14 @@ if (!isset($_SESSION['usuario'])) {
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <label style="font-weight: normal">Fecha</label>
+                                <input type="date" class="form-control" id="fechaEnganche" name="fecha" value="<?php echo date('Y-m-d'); ?>">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="form-group">
                                 <label style="font-weight: normal">Añadir Enganche</label>
                                 <input type="number" class="form-control" id="Enganche3">
