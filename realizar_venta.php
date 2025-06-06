@@ -398,14 +398,35 @@ if (!isset($_SESSION['usuario'])) {
                                                 <div class="form-check form-switch">
                                                     <input class="form-check-input" type="checkbox" role="switch"
                                                         id="toggleRebaja">
-                                                    <label class="form-check-label" for="toggleRebaja">Precio con rebaja
-                                                        o cargo adicional</label>
+                                                    <label class="form-check-label" for="toggleRebaja">Precio por
+                                                        rebaja</label>
                                                 </div>
                                             </div>
                                             <div class="col-lg-4 col-md-4 col-sm-4">
                                                 <div class="form-group">
                                                     <input type="text" id="creditoEscrito" placeholder="Precio"
                                                         disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch"
+                                                        id="toggleCargoAdicional">
+                                                    <label class="form-check-label" for="toggleCargoAdicional">Cargo
+                                                        Adicional</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <div class="form-group">
+                                                    <input type="text" id="cargoAdicional" placeholder="Añadir Cargo"
+                                                        disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <div class="form-group">
+                                                    <button type="button" id="agregarCargo" class="btn btn-primary">AGREGAR</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -510,7 +531,7 @@ if (!isset($_SESSION['usuario'])) {
     <script src="assets/js/usuarios.js"></script>
     <script src="assets/js/ocultar_elementos_4.js"></script>
     <script src="assets/js/fechas_anteriores.js"></script>
-    <script src="assets/js/otras_funciones_sistema.js"></script>
+    <script src="assets/js/otras_funciones_venta.js"></script>
 
     <script src="assets/js/jquery.slimscroll.min.js"></script>
 

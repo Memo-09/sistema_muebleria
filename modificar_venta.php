@@ -68,7 +68,7 @@ if (!isset($_SESSION['usuario'])) {
                 </span>
             </a>
             <script>
-                var usuario = "<?php echo $_SESSION['usuario']; ?>";
+            var usuario = "<?php echo $_SESSION['usuario']; ?>";
             </script>
             <ul class="nav user-menu">
                 <li class="nav-item dropdown has-arrow main-drop">
@@ -79,7 +79,8 @@ if (!isset($_SESSION['usuario'])) {
                     <div class="dropdown-menu menu-drop-user">
                         <div class="profilename">
                             <hr class="m-0">
-                            <a class="dropdown-item" onclick="togglePopupUsuarios(usuario)"> <i class="me-2" data-feather="user"></i> My
+                            <a class="dropdown-item" onclick="togglePopupUsuarios(usuario)"> <i class="me-2"
+                                    data-feather="user"></i> My
                                 Perfil</a>
                             <a class="dropdown-item logout pb-0" onclick="cerrarSesion()"><img
                                     src="assets/img/icons/log-out.svg" class="me-2" alt="img">Cerrar Sesion</a>
@@ -105,7 +106,7 @@ if (!isset($_SESSION['usuario'])) {
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
                     <script>
-                        var usuarioRol = <?php echo $_SESSION["rol"]; ?>;
+                    var usuarioRol = <?php echo $_SESSION["rol"]; ?>;
                     </script>
                     <ul>
                         <li>
@@ -216,8 +217,8 @@ if (!isset($_SESSION['usuario'])) {
                                                 <label style="font-weight: normal">Cliente</label>
                                                 <!-- Cuadro de texto para búsqueda -->
                                                 <input type="text" id="nombre" class="form-control"
-                                                    placeholder="Nombre de Cliente" value="<?php echo $nombreCliente; ?>"
-                                                    readonly>
+                                                    placeholder="Nombre de Cliente"
+                                                    value="<?php echo $nombreCliente; ?>" readonly>
                                             </div>
                                         </div>
                                     </div>
@@ -245,21 +246,21 @@ if (!isset($_SESSION['usuario'])) {
 
                                                     while ($tabla1 = mysqli_fetch_array($ejecutarconsulta1)) {
                                                         ?>
-                                                        <tr>
-                                                            <td><?php echo $tabla1[0]; ?></td>
-                                                            <td><?php echo $tabla1[1]; ?>     <?php echo $tabla1[2]; ?> MARCA:
-                                                                <?php echo $tabla1[3]; ?> COLOR: <?php echo $tabla1[4]; ?>
-                                                            </td>
-                                                            <td><?php echo $tabla1[5]; ?></td>
-                                                            <td><?php echo $tabla1[6]; ?></td>
-                                                            <td><input type="number" name="cantidad" class="form-control"
-                                                                    style="width: 70px;" value="<?php echo $tabla1[7]; ?>"
-                                                                    disabled></td>
-                                                            <td><a href="#"
-                                                                    class="btn btn-success btn-sm fw-bold eliminar-venta">ELIMINAR</a>
-                                                            </td>
-                                                        </tr>
-                                                        <?php
+                                                    <tr>
+                                                        <td><?php echo $tabla1[0]; ?></td>
+                                                        <td><?php echo $tabla1[1]; ?> <?php echo $tabla1[2]; ?> MARCA:
+                                                            <?php echo $tabla1[3]; ?> COLOR: <?php echo $tabla1[4]; ?>
+                                                        </td>
+                                                        <td><?php echo $tabla1[5]; ?></td>
+                                                        <td><?php echo $tabla1[6]; ?></td>
+                                                        <td><input type="number" name="cantidad" class="form-control"
+                                                                style="width: 70px;" value="<?php echo $tabla1[7]; ?>"
+                                                                disabled></td>
+                                                        <td><a href="#"
+                                                                class="btn btn-success btn-sm fw-bold eliminar-venta">ELIMINAR</a>
+                                                        </td>
+                                                    </tr>
+                                                    <?php
                                                     }
                                                     ?>
                                                 </tbody>
@@ -278,7 +279,7 @@ if (!isset($_SESSION['usuario'])) {
                                         <div class="col-lg-4 col-md-4 col-sm-4">
                                             <div class="form-group">
                                                 <label style="font-weight: normal">Cre-Contado</label>
-                                                <input type="text" id="crediContado1" placeholder="Credito Contado"
+                                                <input type="text" id="crediContado1" placeholder="Credi-Contado"
                                                     style="background-color: #90EE90;" readonly>
                                             </div>
                                         </div>
@@ -322,6 +323,51 @@ if (!isset($_SESSION['usuario'])) {
                                                 <label style="font-weight: normal">Enganche</label>
                                                 <input type="text" id="Enganche1" placeholder="Enganche"
                                                     style="background-color: #FFCC80;" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <div class="form-group">
+                                                <label style="font-weight: normal">Opcion Adicional</label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="toggleRebajaActualizar">
+                                                        <label class="form-check-label" for="toggleRebajaActualizar">Precio por
+                                                            rebaja</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                                    <div class="form-group">
+                                                        <input type="text" id="creditoEscritoActualizar" placeholder="Precio"
+                                                            disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="toggleCargoAdicionalActualizar">
+                                                        <label class="form-check-label" for="toggleCargoAdicionalActualizar">Cargo
+                                                            Adicional</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                                    <div class="form-group">
+                                                        <input type="text" id="cargoAdicionalActualizar"
+                                                            placeholder="Añadir Cargo" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-4">
+                                                    <div class="form-group">
+                                                        <button type="button" id="agregarCargoActualizar"
+                                                            class="btn btn-primary">AGREGAR</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -528,6 +574,7 @@ if (!isset($_SESSION['usuario'])) {
     <script src="assets/js/cerrar_sesion.js"></script>
     <script src="assets/js/usuarios.js"></script>
     <script src="assets/js/ocultar_elementos_4.js"></script>
+    <script src="assets/js/otras_funciones_actualizar_venta.js"></script>
 
     <script src="assets/js/script.js"></script>
 </body>
@@ -562,7 +609,9 @@ if (!isset($_SESSION['usuario'])) {
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-center align-items-center">
                                 <div class="form-group">
-                                    <button type="button" id="closePopupUusario" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Cancelar"><img src="./assets/img/cancelar.png" alt=""></button>
+                                    <button type="button" id="closePopupUusario" class="btn btn-primary"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Cancelar"><img
+                                            src="./assets/img/cancelar.png" alt=""></button>
                                 </div>
                             </div>
                         </div>
